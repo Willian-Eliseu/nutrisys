@@ -1,5 +1,5 @@
 .nav-item {
-    margin: 0 1.5rem;
+    margin: 0 1rem;
 }
 
 a.nav-link.active {
@@ -11,10 +11,28 @@ a.nav-link.active {
     background-attachment: fixed;
 }
 
+#fundoFood {
+    background-image: url('../img/food.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 #bannerTopoCover {
-    background-color: #1c88358a;
+    background-color: #1c8835d2;
+}
+
+#fundoFoodCover {
+    background-color: #1c8835d2;
 }
 
 .btnrounded {
     border-radius: 1rem;
+}
+
+.section {
+    padding: 2rem 0;
+}
+
+ul {
+    list-style-type: none;
 }
