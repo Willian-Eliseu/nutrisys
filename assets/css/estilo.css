@@ -1,3 +1,13 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
 .nav-item {
     margin: 0 1rem;
 }
@@ -35,4 +45,8 @@ a.nav-link.active {
 
 ul {
     list-style-type: none;
+}
+
+.text-justify {
+    text-align: justify;
 }
