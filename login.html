@@ -14,22 +14,7 @@
 
 <body class="bg-light">
     <header>
-        <div class="container-fluid bg-success">
-            <div class="row">
-                <div class="col-12">
-                    <div class="container">
-                        <div class="row justify-content-end">
-                            <div class="col-auto">
-                                <p class="pt-3">
-                                    <a class="text-decoration-none text-light fw-bold" href="mailto:contato@nutrisys.com.br">contato@nutrisys.com.br</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbarControl">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbarControl">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="assets/img/logo.png" alt="Logo do site" height="80px">
@@ -65,7 +50,79 @@
         </nav>
     </header>
 
-
+    <section class="section">
+        <div class="container pt-5 bg-success rounded-3 mb-3">
+            <div class="p-4 pt-3 p-md-5 text-white rounded bg-success">
+                <div class="col-12 px-0 pt-3">
+                    <h1 class="display-4 fst-italic fw-bold">Login e Cadastro</h1>
+                    <p class="lead my-3">Faça login para aproveitar todas as funcionalidades do sistema, não possui cadastro? Utilize o formulário à direita.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container py-3">
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-5 ms-lg-1">
+                    <form action="javascript:;" method="post" onsubmit="sendFormLogin()">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <p>Preencha seu email e senha e clique em "Login"</p>
+                            </div>
+                            <div class="col-12">
+                                <label for="emailLogin">Insira seu email cadastrado</label>
+                                <input type="email" name="emailLogin" id="emailLogin" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="senhaLogin">Insira sua senha</label>
+                                <input type="password" name="senhaLogin" id="senhaLogin" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <hr>
+                            </div>
+                            <div class="col-12 d-grid">
+                                <input type="submit" value="Login" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-12 pt-3">
+                            Esqueceu sua senha? clique <a href="#">aqui</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 me-lg-1">
+                    <form action="javascript:;" method="post" onsubmit="sendFormCadastro()">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <p>Preencha os campos e clique em "Cadastro"</p>
+                            </div>
+                            <div class="col-12">
+                                <label for="nomeCadastro">Nome completo</label>
+                                <input type="email" name="nomeCadastro" id="nomeCadastro" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="celularCadastro">Celular</label>
+                                <input type="tel" name="celularCadastro" id="celularCadastro" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="emailCadastro">Seu melhor email</label>
+                                <input type="email" name="emailCadastro" id="emailCadastro" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="senhaCadastro">Senha</label>
+                                <input type="password" name="senhaCadastro" id="senhaCadastro" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <hr>
+                            </div>
+                            <div class="col-12 d-grid">
+                                <input type="submit" value="Cadastro" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="bg-success">
         <div class="container">

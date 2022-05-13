@@ -14,22 +14,7 @@
 
 <body class="bg-light">
     <header>
-        <div class="container-fluid bg-success">
-            <div class="row">
-                <div class="col-12">
-                    <div class="container">
-                        <div class="row justify-content-end">
-                            <div class="col-auto">
-                                <p class="pt-3">
-                                    <a class="text-decoration-none text-light fw-bold" href="mailto:contato@nutrisys.com.br">contato@nutrisys.com.br</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbarControl">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbarControl">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="assets/img/logo.png" alt="Logo do site" height="80px">
@@ -65,7 +50,67 @@
         </nav>
     </header>
 
-
+    <section class="section">
+        <div class="container pt-5 bg-success rounded-3 mb-3">
+            <div class="p-4 pt-3 p-md-5 text-white rounded bg-success">
+                <div class="col-12 px-0 pt-3">
+                    <h1 class="display-4 fst-italic fw-bold">Entre em contato</h1>
+                    <p class="lead my-3">Estamos a disposição para qualquer esclarecimento de dúvidas ou possíveis necessidades. Se tiver alguma sugestão, estão abertos a ouví-la.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-12 col-lg-10 mx-auto">
+                    <form action="javascript:;" method="post" id="form-contato" onsubmit="sendForm()">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome*" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Sobrenome*" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="email*" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input type="tel" name="celular" id="celular" class="form-control" placeholder="Celular (99) 99999-9999*" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea name="mensagem" id="mensagem" class="form-control" rows="10" placeholder="O que podemos fazer por você?"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <hr>
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-6 d-grid">
+                                        <input type="reset" value="Limpar" class="btn btn-secondary">
+                                    </div>
+                                    <div class="col-6 d-grid">
+                                        <input type="submit" value="Enviar" class="btn btn-success">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-10 mx-auto pt-5">
+                    <h4>Saiba como chegar até nós</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 d-none d-md-block px-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.6103639160183!2d-49.07012790218364!3d-22.330570968373546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf6709daa4fc13%3A0x703d938047dac5ba!2sR.%20Gustavo%20Maciel%20-%20Bauru%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1652403626305!5m2!1spt-BR!2sbr"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="bg-success">
         <div class="container">
@@ -126,7 +171,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
