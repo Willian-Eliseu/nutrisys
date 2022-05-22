@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA==" crossorigin="anonymous"
         referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
 <body class="bg-light">
@@ -88,24 +89,34 @@
                             Esqueceu sua senha? clique <a href="#">aqui</a>
                         </div>
                     </div>
+                    <div class="row d-none">
+                        <div class="col-12">
+                            <p>teste dialog</p>
+                            <button onclick="abrirDialog()">abrir dialog</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-lg-5 me-lg-1">
-                    <form action="javascript:;" method="post" onsubmit="sendFormCadastro()" id="form-cadastro">
+                    <form action="javascript:;" method="post" id="form-cadastro">
                         <div class="row g-3">
                             <div class="col-12">
                                 <p>Preencha os campos e clique em "Cadastro"</p>
                             </div>
                             <div class="col-12">
                                 <label for="nomeCadastro">Nome completo</label>
-                                <input type="email" name="nomeCadastro" id="nomeCadastro" class="form-control" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="celularCadastro">Celular</label>
-                                <input type="tel" name="celularCadastro" id="celularCadastro" class="form-control" required>
+                                <input type="text" name="nomeCadastro" id="nomeCadastro" class="form-control" required>
                             </div>
                             <div class="col-12">
                                 <label for="emailCadastro">Seu melhor email</label>
                                 <input type="email" name="emailCadastro" id="emailCadastro" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="cpfCadastro">CPF</label>
+                                <input type="text" name="cpfCadastro" id="cpfCadastro" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="celularCadastro">Celular</label>
+                                <input type="tel" name="celularCadastro" id="celularCadastro" class="form-control" required>
                             </div>
                             <div class="col-12">
                                 <label for="senhaCadastro">Senha</label>
@@ -123,6 +134,19 @@
             </div>
         </div>
     </section>
+
+    <!-- dialog -->
+    <dialog class="mensagens msgFechada" id="dialogMessage">
+        <header>
+            <h4 id="dialogHeader"></h4>
+        </header>
+        <section>
+            <p id="dialogBody"></p>
+        </section>
+        <footer>
+            <button id="dialogClose" class="btn btn-secondary">Fechar</button>
+        </footer>
+    </dialog>
 
     <footer class="bg-success">
         <div class="container">

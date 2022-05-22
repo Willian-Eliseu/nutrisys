@@ -1,0 +1,32 @@
+.mensagens {
+    max-width: 80vw;
+    width: 600px;
+    margin-top: 20vh;
+    background-color: #c0c0c0;
+    border-radius: 1rem;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.msgFechada {
+    display: none;
+}
+
+.mensagens>header {
+    padding: 0.5rem;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mensagens>section {
+    background-color: whitesmoke;
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+.mensagens>footer {
+    padding: 0.5rem;
+    align-self: flex-end;
+}
