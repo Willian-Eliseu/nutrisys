@@ -1,0 +1,28 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+#barra-lateral {
+    width: 15%;
+    background-color: #00812e;
+    color: white;
+}
+
+#conteudo-principal {
+    width: 85%;
+}
+
+@media screen and (max-width: 600px) {
+    #barra-lateral {
+        width: 0%;
+    }
+    #conteudo-principal {
+        width: 100%;
+    }
+}
