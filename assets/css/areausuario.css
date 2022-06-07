@@ -9,20 +9,22 @@ footer {
 }
 
 #barra-lateral {
-    width: 15%;
+    width: 15vw;
     background-color: #00812e;
     color: white;
+    display: inline-block;
 }
 
 #conteudo-principal {
-    width: 85%;
+    width: 85vw;
+    display: inline-block;
 }
 
 @media screen and (max-width: 600px) {
     #barra-lateral {
-        width: 0%;
+        width: 0vw;
     }
     #conteudo-principal {
-        width: 100%;
+        width: 100vw;
     }
 }
