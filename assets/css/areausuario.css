@@ -4,23 +4,34 @@ body {
     flex-direction: column;
 }
 
+#cabecalho {
+    height: 11vh;
+}
+
 footer {
     margin-top: auto;
+    background-color: #043816;
+    color: white;
+    height: 11vh;
 }
 
 #barra-lateral {
-    width: 15vw;
     background-color: #00812e;
     color: white;
-    display: inline-block;
+    height: 78vh;
 }
 
 #conteudo-principal {
-    width: 85vw;
-    display: inline-block;
+    background-color: aquamarine;
+    height: 78vh;
 }
 
-@media screen and (max-width: 600px) {
+#menu-lateral {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+}
+
+@media screen and (max-width: 1200px) {
     #barra-lateral {
         width: 0vw;
     }

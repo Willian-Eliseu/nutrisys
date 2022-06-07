@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="cabecalho">
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbarControl">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -37,32 +37,51 @@
             </div>
         </nav>
     </header>
-    <aside id="barra-lateral">
-        <header>
-            Título da barra lateral
-        </header>
-        <article>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
+    <main>
+        <article id="menu-lateral">
+            <aside id="barra-lateral">
+                <header>
+                    Título da barra lateral
+                </header>
+                <section>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+            <section id="conteudo-principal">
+                <p>Conteúdo do corpo principal</p>
+                <p>Conteúdo do corpo principal</p>
+                <p>Conteúdo do corpo principal</p>
+                <p>Conteúdo do corpo principal</p>
+                <p>Conteúdo do corpo principal</p>
+                <p>Conteúdo do corpo principal</p>
+                <p>Conteúdo do corpo principal</p>
+                <p>Conteúdo do corpo principal</p>
+                <p>Conteúdo do corpo principal</p>
+                <p>Conteúdo do corpo principal</p>
+            </section>
         </article>
-    </aside>
-    <main id="conteudo-principal">
-        Conteúdo do corpo principal
     </main>
     <footer>
-
+        <div class="container">
+            <div class="row py-3">
+                <div class="col-12">
+                    <p class="text-center"><b>NutriSys 2022</b> - Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
