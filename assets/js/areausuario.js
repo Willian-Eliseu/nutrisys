@@ -3,4 +3,4 @@ window.addEventListener('load', function() {
     nome = nome.split(' ');
     primeiroNome = nome[0];
     document.getElementById('nome-usuario').value = primeiroNome;
-})
+});
