@@ -37,13 +37,19 @@ async function sendFormLogin(x) {
 
     const data = await response.json();
 
-    sessionStorage.setItem('email', data.email);
-    sessionStorage.setItem('cpf', data.cpf);
-    sessionStorage.setItem('nome', data.nome);
-    sessionStorage.setItem('id', data.id);
-    sessionStorage.setItem('celular', data.celular);
+    if (data.codigo == 1) {
+        //sucesso
+        sessionStorage.setItem('email', data.email);
+        sessionStorage.setItem('cpf', data.cpf);
+        sessionStorage.setItem('nome', data.nome);
+        sessionStorage.setItem('id', data.id);
+        sessionStorage.setItem('celular', data.celular);
 
-    window.location.href = "./areadousuario";
+        window.location.href = "./areadousuario";
+    } else {
+        //erro
+        abrirDialog("Erro", "Usuário não encontrado, por favor verifique seu email e/ou senha");
+    }
 }
 
 async function sendFormCadastro(x) {
