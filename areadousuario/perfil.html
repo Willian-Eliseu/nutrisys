@@ -52,10 +52,10 @@
                     <div class="container">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" href="index.html">Home</a>
+                                <a class="nav-link" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="perfil.html">Meus dados</a>
+                                <a class="nav-link active" href="perfil.html">Meus dados</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="consultas.html">Minhas consultas</a>
@@ -74,14 +74,45 @@
                 <div class="container" id="container-conteudo">
                     <div class="row">
                         <div class="col-12">
-                            <h1>Bem-vindo(a) Usuário</h1>
+                            <h1>Meus dados</h1>
                             <hr>
                             <p>
-                                Utilize o menu lateral para navegar entre as opções.
+                                Altere os dados e clique em "salvar alterações".
                             </p>
-                            <p>
-                                Aqui, você pode alterar seus dados, procurar nutricionistas disponíveis, agendar uma consulta com algum nutricionista e consultar uma ótima lista de substituição alimentar focada em sua saúde.
-                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="">
+                                <div class="row g-3">
+                                    <div class="col-12 col-md-6">
+                                        <label for="nomeCadastro">Nome completo</label>
+                                        <input type="text" name="nomeCadastro" id="nomeCadastro" class="form-control" required>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="nomeCadastro">Email</label>
+                                        <input type="text" name="nomeCadastro" id="nomeCadastro" class="form-control" required>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="nomeCadastro">CPF</label>
+                                        <input type="text" name="nomeCadastro" id="nomeCadastro" class="form-control" required>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="nomeCadastro">Celular</label>
+                                        <input type="text" name="nomeCadastro" id="nomeCadastro" class="form-control" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <hr>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row justify-content-end">
+                                            <div class="col-6 col-md-3 d-grid">
+                                                <input type="submit" value="Salvar Alterações" class="btn btn-success">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
