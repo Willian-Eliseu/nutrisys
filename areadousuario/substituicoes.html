@@ -14,7 +14,7 @@
 
 <body>
     <header id="cabecalho">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbarControl">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbarControl" style="z-index: 100;">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="../assets/img/logo.png" alt="Logo do site" height="80px">
@@ -23,12 +23,29 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
                 <div class="collapse navbar-collapse" id="navigationBar">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item mx-3">
-                            <p class="pt-2">Bem-vindo(a) <span id="nome-usuario">Willian</span></p>
+                    <ul class="navbar-nav d-lg-none">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="login.html" class="nav-link btn btn-success fw-bolder btnrounded">
+                            <a class="nav-link" href="perfil.html">Meus dados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consultas.html">Solicitações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nutricionistas.html">Nutricionistas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="substituicoes.html">Substituições</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-lg-3">
+                            <p class="pt-2">Bem-vindo(a) <span id="nome-usuario"></span></p>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:logout()" class="nav-link btn btn-success fw-bolder btnrounded">
                                 SAIR
                             </a>
                         </li>
@@ -58,7 +75,7 @@
                                 <a class="nav-link" href="perfil.html">Meus dados</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="consultas.html">Minhas consultas</a>
+                                <a class="nav-link" href="consultas.html">Solicitações</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="nutricionistas.html">Nutricionistas</a>

@@ -1,6 +1,7 @@
+const myModal = new bootstrap.Modal(document.getElementById('modalForm'), {});
+const formSenha = document.getElementById('formSenha');
 const formLogin = document.getElementById('form-login');
 const formCadastro = document.getElementById('form-cadastro');
-const mensagens = document.getElementById('dialogMessage');
 
 formLogin.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -48,7 +49,8 @@ async function sendFormLogin(x) {
         window.location.href = "./areadousuario";
     } else {
         //erro
-        abrirDialog("Erro", "Usuário não encontrado, por favor verifique seu email e/ou senha");
+        Swal.fire("Erro", data.msg, "error");
+        document.getElementById('form-login').reset();
     }
 }
 
@@ -68,20 +70,69 @@ async function sendFormCadastro(x) {
 
     if (data.codigo == 1) {
         //sucesso
-        abrirDialog("Sucesso", data.msg);
+        Swal.fire("Sucesso", data.msg, "success");
+        document.getElementById('form-cadastro').reset();
     } else {
         //erro
-        abrirDialog("Erro", data.msg);
+        Swal.fire("Erro", data.msg, "error");
+        document.getElementById('form-cadastro').reset();
     }
 }
 
-function abrirDialog(x, y) {
-    document.getElementById('dialogHeader').innerHTML = x;
-    document.getElementById('dialogBody').innerHTML = y;
-    mensagens.setAttribute('open', true);
-    mensagens.classList.remove('msgFechada');
+function redefinirSenha() {
+    myModal.show();
 }
 
-document.getElementById('dialogClose').addEventListener('click', function() {
-    mensagens.classList.add('msgFechada');
-})
+formSenha.onsubmit = (e) => {
+
+    e.preventDefault();
+
+    if (this.novaSenha.value != this.repeteNovaSenha.value) {
+        Swal.fire("Atenção", "As senhas precisam ser iguais", "warning");
+    } else {
+        const formattedData = {
+            email: this.emailSenha.value,
+            cpf: this.cpfSenha.value,
+            novasenha: this.novaSenha.value
+        }
+        sendFormSenha(formattedData);
+    }
+}
+
+async function sendFormSenha(x) {
+    var bodyContent = JSON.stringify(x);
+
+    const response = await fetch("https://test.wl.tv.br/eliseu/nutrisys/apinutrisys/api/send_novasenha.php", {
+        method: "POST",
+        body: bodyContent,
+        header: {
+            'Content-type': 'application/x-www-form-urlencoded'
+        },
+        redirect: 'follow'
+    });
+
+    const data = await response.json();
+
+    if (data.codigo == 1) {
+        //sucesso
+        Swal.fire({
+            title: 'Sucesso',
+            html: `${data.msg}`,
+            allowOutsideClick: false,
+            icon: 'success',
+            showCancelButton: false,
+            confirmButtonColor: '#3085d6',
+            showConfirmButton: true,
+            cancelButtonText: 'Não',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.value) {
+                window.location.reload();
+            }
+        });
+    } else {
+        //erro
+        Swal.fire("Erro", data.msg, "error");
+        document.getElementById('formSenha').reset();
+    }
+}
